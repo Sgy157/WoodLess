@@ -20,7 +20,7 @@ return new class extends Migration
             $table->json('attributes')->nullable();
             $table->timestamps();
 
-            $table->foreign('basket_id')->references('user_id')->on('baskets')->onDelete('cascade');
+            $table->foreign('basket_id')->references('id')->on('baskets')->onDelete('cascade');
             $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
         });
     }
